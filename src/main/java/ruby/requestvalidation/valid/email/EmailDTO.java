@@ -9,8 +9,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class EmailDTO {
 
-    @EmailPattern(require = true)
+    @EmailValid(require = true)
     private String requireEmail;
-    @EmailPattern
+    @EmailValid
     private String notRequireEmail;
 }

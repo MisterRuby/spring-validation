@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class EmailValidator implements ConstraintValidator<EmailPattern, String> {
+public class EmailValidator implements ConstraintValidator<EmailValid, String> {
 
-    private EmailPattern constraintAnnotation;
+    private EmailValid constraintAnnotation;
 
     @Override
-    public void initialize(EmailPattern constraintAnnotation) {
+    public void initialize(EmailValid constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
         this.constraintAnnotation = constraintAnnotation;
     }

@@ -8,7 +8,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import ruby.requestvalidation.valid.email.EmailDTO;
-import ruby.requestvalidation.valid.email.EmailPattern;
+import ruby.requestvalidation.valid.email.EmailValid;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -34,7 +34,7 @@ class EmailValidTest {
                 .content(mapper.writeValueAsBytes(emailDTO))
             )
             .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.validation.requireEmail").value(EmailPattern.MESSAGE));
+            .andExpect(jsonPath("$.validation.requireEmail").value(EmailValid.MESSAGE));
     }
 
     @Test
@@ -48,7 +48,7 @@ class EmailValidTest {
                 .content(mapper.writeValueAsBytes(emailDTO))
             )
             .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.validation.requireEmail").value(EmailPattern.MESSAGE));
+            .andExpect(jsonPath("$.validation.requireEmail").value(EmailValid.MESSAGE));
     }
 
     @Test
@@ -63,8 +63,8 @@ class EmailValidTest {
                 .content(mapper.writeValueAsBytes(emailDTO))
             )
             .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.validation.requireEmail").value(EmailPattern.MESSAGE))
-            .andExpect(jsonPath("$.validation.notRequireEmail").value(EmailPattern.MESSAGE));
+            .andExpect(jsonPath("$.validation.requireEmail").value(EmailValid.MESSAGE))
+            .andExpect(jsonPath("$.validation.notRequireEmail").value(EmailValid.MESSAGE));
     }
 
     @Test

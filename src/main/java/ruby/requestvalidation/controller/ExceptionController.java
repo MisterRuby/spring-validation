@@ -10,7 +10,7 @@ import ruby.requestvalidation.ErrorResponse;
 @RestControllerAdvice
 public class ExceptionController {
 
-    public static final String BIND_EXCEPTION_MESSAGE = "형식에 맞지 않는 값이 존재합니다.";
+    public static final String BIND_EXCEPTION_MESSAGE = "타입에 맞지 않는 값이 존재합니다.";
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(BindException.class)

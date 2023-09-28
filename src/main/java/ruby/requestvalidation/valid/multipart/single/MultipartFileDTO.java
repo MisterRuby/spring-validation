@@ -1,4 +1,4 @@
-package ruby.requestvalidation.valid.multipart;
+package ruby.requestvalidation.valid.multipart.single;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

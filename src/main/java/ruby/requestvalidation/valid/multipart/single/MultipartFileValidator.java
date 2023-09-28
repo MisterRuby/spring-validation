@@ -1,4 +1,4 @@
-package ruby.requestvalidation.valid.multipart;
+package ruby.requestvalidation.valid.multipart.single;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
+import ruby.requestvalidation.valid.multipart.MultipartFileType;
 
 import java.util.Arrays;
 

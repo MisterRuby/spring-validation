@@ -1,13 +1,12 @@
-package ruby.requestvalidation.valid.multipart;
+package ruby.requestvalidation.valid.multipart.single;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
+import ruby.requestvalidation.valid.multipart.MultipartFileType;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
-import java.util.ArrayList;
-import java.util.List;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;

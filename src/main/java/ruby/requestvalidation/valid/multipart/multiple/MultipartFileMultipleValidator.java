@@ -63,9 +63,8 @@ public class MultipartFileMultipleValidator implements ConstraintValidator<Multi
     }
 
     private void setEmptyFileNameValidMessage(ConstraintValidatorContext context) {
-        String emptyFileNameValidMessage = "파일명은 공백이 아니어야 합니다.";
         context.disableDefaultConstraintViolation();
-        context.buildConstraintViolationWithTemplate(emptyFileNameValidMessage).addConstraintViolation();
+        context.buildConstraintViolationWithTemplate(MultipartFileMultipleValid.FILENAME_EMPTY_MESSAGE).addConstraintViolation();
     }
 
     private boolean isValidType(MultipartFile multipartFile) {

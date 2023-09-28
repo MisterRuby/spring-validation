@@ -18,6 +18,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Documented
 public @interface MultipartFileValid {
     String MESSAGE = "파일 형식이 올바르지 않습니다.";
+    String FILENAME_EMPTY_MESSAGE = "파일명은 공백이 아니어야 합니다.";
 
     String message() default MESSAGE;
 
